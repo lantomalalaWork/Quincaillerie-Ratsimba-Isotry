@@ -1,0 +1,16 @@
+graph TD
+    Client((Client))
+    Admin((Admin))
+    Système((Système))
+
+    Client -->|Passer une commande| Système
+    Système -->|Valider la commande| Admin
+    Client -->|Payer la commande| Système
+    Système -->|Confirmer le paiement| Admin
+    Admin -->|Expédier la commande| Système
+    Client -->|Annuler la commande| Système
+    Admin -->|Annuler la commande| Système
+
+    style Client fill:#f9f,stroke:#333,stroke-width:4px
+    style Admin fill:#bbf,stroke:#333,stroke-width:4px
+    style Système fill:#bfb,stroke:#333,stroke-width:4px

@@ -1,0 +1,78 @@
+erDiagram
+    PRODUIT ||--o{ STOCK : "a"
+    PRODUIT ||--o{ COMMANDE_PRODUIT : "contient"
+    PRODUIT ||--o{ STATISTIQUES_RAPPORTS : "a"
+    UTILISATEUR ||--o{ COMMANDE : "passe"
+    COMMANDE ||--o{ COMMANDE_PRODUIT : "contient"
+    COMMANDE ||--|| PAIEMENT : "a"
+    COMMANDE }o--o{ PROMOTION : "peut avoir"
+
+    PRODUIT {
+        string id
+        string nom
+        string description
+        number prix
+        string categorie
+        number quantiteStock
+        string imageUrl
+        date dateAjout
+    }
+
+    STOCK {
+        string id
+        string produitId
+        number quantiteDisponible
+        date derniereMiseAJour
+    }
+
+    COMMANDE {
+        string id
+        string clientId
+        number total
+        enum statut
+        date dateCommande
+    }
+
+    UTILISATEUR {
+        string id
+        string nom
+        string email
+        string motDePasse
+        enum role
+        string adresse
+        string telephone
+        date dateInscription
+    }
+
+    PAIEMENT {
+        string id
+        string commandeId
+        number montant
+        enum methode
+        enum statut
+        date datePaiement
+    }
+
+    PROMOTION {
+        string id
+        string codePromo
+        number remisePourcentage
+        date dateDebut
+        date dateFin
+        boolean statut
+    }
+
+    STATISTIQUES_RAPPORTS {
+        string id
+        string produitId
+        number nombreVentes
+        number revenuTotal
+        date dateMiseAJour
+    }
+
+    COMMANDE_PRODUIT {
+        string commandeId
+        string produitId
+        number quantite
+        number prixUnitaire
+    }
