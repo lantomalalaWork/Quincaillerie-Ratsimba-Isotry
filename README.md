@@ -93,4 +93,4 @@ Ce projet est sous licence MIT. Voir le fichier \`LICENSE\` pour plus de détail
 Votre Nom - votre@email.com
 
 Lien du projet : [https://github.com/lantomalalaWork/Quincaillerie-Ratsimba-Isotry](https://github.com/lantomalalaWork/Quincaillerie-Ratsimba-Isotry)
-
+<!-- https://chatgpt.com/share/67a36f96-6984-8013-bbd5-1ed67bdd310d -->
